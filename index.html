@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Un ponte tra culture: l'eredità arabo-normanna in Sicilia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --main-color: #bfa254;
+      --background: #f9f5ec;
+      --text: #333;
+      --accent: #444;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--background);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    header {
+      background-color: var(--main-color);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header h2 {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #fffdd0;
+    }
+
+    main {
+      padding: 2rem 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    .read-more-container {
+      position: relative;
+    }
+
+    .dots {
+      display: inline;
+    }
+
+    .more-text {
+      display: none;
+    }
+
+    .expand-btn {
+      background: none;
+      border: none;
+      color: var(--main-color);
+      font-size: 1rem;
+      cursor: pointer;
+      margin-left: 0.3rem;
+    }
+
+    .carousel {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+    }
+
+    .carousel-track {
+      display: flex;
+      animation: scroll 20s linear infinite;
+    }
+
+    .carousel-track img {
+      width: 300px;
+      margin-right: 1rem;
+      border-radius: 10px;
+      flex-shrink: 0;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .cta {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .cta h3 {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    audio {
+      width: 100%;
+      max-width: 400px;
+    }
+
+    footer {
+      background-color: var(--main-color);
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      header h2 {
+        font-size: 1rem;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
+
+      .carousel-track img {
+        width: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>MOSTRA D'ARTE</h1>
+    <h2>UN PONTE TRA CULTURE: L'EREDITÀ ARABO-NORMANNA IN SICILIA</h2>
+  </header>
+
+  <main>
+    <section>
+      <h2>DAL 28 MAGGIO</h2>
+      <p>Aula magna Istituto Archimede Messina</p>
+    </section>
+
+    <section>
+      <h2>IL PROGETTO</h2>
+      <p class="read-more-container">
+        “Un Ponte tra Culture” è progetto finanziato dalla Regione Sicilia con lo scopo di valorizzare l’eredità arabo-normanna in Sicilia e condotto dai Proff. Calderone e Vanfiori
+        <span class="dots" id="dots1">...</span>
+        <span class="more-text" id="more1">
+          . Principalmente incentrato sull’architettura siciliana tra XI e XII secolo, il progetto si pone l’obiettivo di stimolare il pensiero critico dei giovani sulla persistenza della cultura araba e normanna nella produzione artistica contemporanea. A partire dal 28 maggio nell’Aula Magna del Liceo Archimede (Viale Regina Margherita, 3) di Messina saranno visibili i lavori degli studenti delle classi II B, C, F e M.
+        </span>
+        <button class="expand-btn" onclick="toggleText('1')">Leggi di più</button>
+      </p>
+
+      <h2>L'ANTICO E IL MODERNO</h2>
+      <p class="read-more-container">
+        Per sua natura l’arte contemporanea ha un legame col passato. Esso si manifesta talvolta come citazione di opere d’arte o architetture note
+        <span class="dots" id="dots2">...</span>
+        <span class="more-text" id="more2">
+          , talaltra come eco lontano. Di fatto nella società e nella cultura siciliana attuale troviamo moltissimi riferimenti alla cultura arabo-normanna che si traducono anche nelle espressioni artistiche. Non ultima la street art. La rivisitazione di elementi architettonici e decorazioni sotto forma di pattern è emersa come chiave di lettura dell’arte contemporanea nelle opere esposte. Gli studenti hanno tradotto le suggestioni raccolte durante le visite guidate in opere d’arte che variano dai collage fotografici alle pitture e ripropongono elementi antichi in chiave contemporanea. A seguirli nella realizzazione delle opere e della mostra la Storica d’Arte Sara Fosco. Durante i laboratori gli studenti stessi hanno curato comunicazione e allestimento dell’esposizione, mettendosi nei panni dei professionisti della cultura e trovando soluzioni originali per la trasmissione dei contenuti artistici.
+        </span>
+        <button class="expand-btn" onclick="toggleText('2')">Leggi di più</button>
+      </p>
+    </section>
+
+    <section>
+      <h2>FOTO</h2>
+      <div class="carousel">
+        <div class="carousel-track">
+          <img src="facciata mili.jpg" alt="Foto 1">
+          <img src="itala.jpg" alt="Foto 2">
+          <img src="facciata fd.jpg" alt="Foto 3">
+          <img src="lato itala.jpg" alt="Foto 4">
+          <img src="faccizata  fd 2.jpg" alt="Foto 5">
+          <img src="facciata fd 3.jpg" alt="Foto 1 clone">
+          <img src="itala.jpg" alt="Foto 2 clone">
+          <img src="faccizata  fd 2.jpg" alt="Foto 3 clone">
+        </div>
+      </div>
+
+      <h2>I PARTECIPANTI</h2>
+      <p class="read-more-container">
+        Patrick Amiscosa, Samuele Battiato, Giulia Cancelliere, Cristina Caristi, Samuele Carpentiere, Davide Cingari, Antonino Crisafulli, Sara di Blasi, Alessia Donato, Gianmaria Ficarra
+        <span class="dots" id="dots3">...</span>
+        <span class="more-text" id="more3">
+          , Matteo Filone, Gaia Maria Galeazzo, Angel Garcia, Damiano Gatto, Yasmine Hanyny, Anita Lo Iacono, Valentina Morabito, Alessia Paci, Alice Pantano, Alessandro Raneri, Giulia Salvini, Giulia Scotto, Mattia Smeriglio, Sara Zito.
+        </span>
+        <button class="expand-btn" onclick="toggleText('3')">Leggi di più</button>
+      </p>
+    </section>
+
+    <section class="cta">
+      <h3>Ascolta la narrazione del progetto</h3>
+      <audio controls>
+        <source src="" type="audio/mpeg">
+        Il tuo browser non supporta l'audio HTML5.
+      </audio>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Visioni del Presente. Tutti i diritti riservati.
+  </footer>
+
+  <script>
+    function toggleText(id) {
+      const dots = document.getElementById("dots" + id);
+      const more = document.getElementById("more" + id);
+      const btn = dots.nextElementSibling.nextElementSibling;
+
+      if (more.style.display === "inline") {
+        more.style.display = "none";
+        dots.style.display = "inline";
+        btn.textContent = "Leggi di più";
+      } else {
+        more.style.display = "inline";
+        dots.style.display = "none";
+        btn.textContent = "Nascondi";
+      }
+    }
+  </script>
+
+</body>
+</html>
